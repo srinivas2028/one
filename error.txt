@@ -1,0 +1,26 @@
+Error in git checkout JOb, python project with self hosted linux VM as agent
+
+git version
+git version 2.25.1
+git config --get remote.origin.url
+##[warning]'git config --get remote.origin.url' failed with exit code: 1, output: ''
+##[error]One or several exceptions have been occurred.
+##[error]System.UnauthorizedAccessException: Access to the path '/home/azureuser/myagent/_work/8/s/policy/policy/bin/pip3.8' is denied.
+ ---> System.IO.IOException: Permission denied
+   --- End of inner exception stack trace ---
+   at System.IO.FileSystem.DeleteFile(String fullPath)
+   at System.IO.FileInfo.Delete()
+   at Microsoft.VisualStudio.Services.Agent.Util.IOUtil.<>c__DisplayClass12_0.<DeleteDirectory>b__0(FileSystemInfo item) in /home/vsts/work/1/s/src/Agent.Sdk/Util/IOUtil.cs:line 156
+   at System.Linq.Parallel.ForAllOperator`1.ForAllEnumerator`1.MoveNext(TInput& currentElement, Int32& currentKey)
+   at System.Linq.Parallel.ForAllSpoolingTask`2.SpoolingWork()
+   at System.Linq.Parallel.SpoolingTaskBase.Work()
+   at System.Linq.Parallel.QueryTask.BaseWork(Object unused)
+   at System.Linq.Parallel.QueryTask.<>c.<.cctor>b__10_0(Object o)
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+##[error]System.UnauthorizedAccessException: Access to the path '/home/azureuser/myagent/_work/8/s/policy/policy/lib64' is denied.
+ ---> System.IO.IOException: Permission denied
